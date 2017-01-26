@@ -42,3 +42,8 @@ Can you use new template strings to render to the DOM?
 - https://www.omdbapi.com/#parameters
 - http://api.jquery.com/jquery.ajax/
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+# ✌️ The Sequel?!
+
+Can you add an express backend that persists favorited movies?
+When a user visits '/faves' should movies you've persisted to MongoDB.
