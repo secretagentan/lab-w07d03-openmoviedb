@@ -1,5 +1,5 @@
 console.log('hello from main.js');
-console.log(test);
+// console.log(test);
 
 const $btn = $('button');
 const $input = $('#query');
@@ -11,7 +11,7 @@ $input.focus();
 $btn.on('click', (evt) => {
   var inputVal = $input.val();
   OMDB.search(inputVal, function(data) {
-    console.log(data);
+    // console.log(data);
     let title = data.Title;
     let imdb = data.imdbID;
     var text = `<a class="movie" data-id="${imdb}" href="#">${title}</a>`
@@ -21,14 +21,13 @@ $btn.on('click', (evt) => {
 
 $(document).on('click', '.movie', (evt) => {
   evt.preventDefault();
-  console.log('link clicked');
-  // let id = $(this).attr('data-id');
+  // console.log('link clicked');
   var $link = $(evt.target);
   var id = $link.data().id;
   console.log(id);
   OMDB.find(id, function(results) {
-    console.log(results);
-    console.log(results.Title);
+    // console.log(results);
+    // console.log(results.Title);
     let title = results.Title;
     let plot = results.Plot;
     let poster = `<img src="${results.Poster}">`;
@@ -40,35 +39,3 @@ $(document).on('click', '.movie', (evt) => {
     $details.append(html);
   })
 })
-
-// const $root = document.querySelector('#root');
-// $root.innerHTML = render('An', ['mimi', 'schmimi', 'peapod']);
-// function render(name, friends) {
-//   const list = friends.map( (p) => {
-//     return `<li>${p}</li>`;
-//   }).join('');
-//   return (`<h1>Hello there</h1>
-//     <p>Nice to meet you, ${name}.</p>
-//     <p>These are my friends:</p>
-//     <ul>
-//       ${list}
-//     </ul>
-//     <a href="http://www.google.com">Check this out</a>
-//   `);
-// }
-
-// const request = require('request');
-
-// function get(cb, base='USD') {
-//   return new Promise( (resolve, reject) => {
-//     const url = `http://api.fixer.io/latest?base=${base}`;
-//     request(url, (error, response, body) => {
-//       if (!error && response.statusCode === 200) {
-//         const data = JSON.parse(body);
-//         resolve(data);
-//       } else {
-//         reject(error, response);
-//       }
-//     });
-//   })
-// }
