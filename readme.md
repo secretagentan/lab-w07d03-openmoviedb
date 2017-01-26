@@ -43,7 +43,7 @@ Can you use new template strings to render to the DOM?
 - http://api.jquery.com/jquery.ajax/
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
-# The Sequel?!
+# ✌️ The Sequel?!
 
 Can you add an express backend that persists favorited movies?
 When a user visits '/faves' should movies you've persisted to MongoDB.
